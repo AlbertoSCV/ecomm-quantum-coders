@@ -13,10 +13,21 @@ interface CardData {
   imageUrl: string;
 }
 
+interface Fund {
+    id: number;
+    name: string;
+    description: string;
+    investors: number;
+    totalAmount: number;
+    raisedAmount: number;
+    imageUrl: string;
+    tags: string[];
+  }
+
 interface CommerceCarouselProps {
   title: string;
   icon: JSX.Element;
-  slides: CardData[][];
+  slides: Fund[][];
   tagKey: number;
 }
 
@@ -43,6 +54,7 @@ const CommerceCarousel: React.FC<CommerceCarouselProps> = ({ title, icon, slides
                   totalAmount={card.totalAmount}
                   raisedAmount={card.raisedAmount}
                   imageUrl={card.imageUrl}
+                  tags={card.tags}
                 />
               ))}
             </div>

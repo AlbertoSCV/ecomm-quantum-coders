@@ -2,17 +2,18 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface CardProps {
-  id: string;
+interface Fund {
+  id: number;
   name: string;
   description: string;
   investors: number;
-  totalAmount: string;
+  totalAmount: number;
   raisedAmount: number;
   imageUrl: string;
+  tags: string[];
 }
 
-const Card: React.FC<CardProps> = ({ id, name, description, investors, totalAmount, raisedAmount, imageUrl }) => {
+const Card: React.FC<Fund> = ({ id, name, description, investors, totalAmount, raisedAmount, imageUrl }) => {
   return (
     <div className="card card-compact h-full bg-base-100 md:w-48 lg:w-56 xl:w-72 2xl:w-96 shadow-xl my-8">
       <figure className='h-36'>

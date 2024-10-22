@@ -57,13 +57,14 @@ const SearchPage = () => {
                 filteredFunds.map((card, idx) => (
                 <Card
                     key={idx}
-                    id={card.id.toString()}
+                    id={card.id}
                     name={card.name}
                     description={card.description}
                     investors={card.investors}
-                    totalAmount={card.totalAmount.toString()}
+                    totalAmount={card.totalAmount}
                     raisedAmount={card.raisedAmount}
                     imageUrl={card.imageUrl}
+                    tags={card.tags}
                 />
                 ))
                 ) : (
