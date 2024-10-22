@@ -22,7 +22,7 @@ interface Fund {
 }
 
 // Función para agrupar los fondos en grupos de "n" (en este caso, 3)
-const groupDataInSlides = (data, itemsPerSlide = 3) => {
+const groupDataInSlides = (data: Fund[], itemsPerSlide = 3) => {
   const groupedSlides = [];
   for (let i = 0; i < data.length; i += itemsPerSlide) {
     groupedSlides.push(data.slice(i, i + itemsPerSlide));

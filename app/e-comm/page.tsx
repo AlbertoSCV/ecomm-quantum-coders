@@ -3,6 +3,17 @@ import React, { useEffect, useState } from 'react';
 import CommerceCarousel from './components/CommerceCarousel'
 import CommerceNavbar from './components/CommerceNavbar';
 
+interface Fund {
+  id: number;
+  name: string;
+  description: string;
+  investors: number;
+  totalAmount: number;
+  raisedAmount: number;
+  imageUrl: string;
+  tags: string[];
+}
+
 const Commerce = () => {
   const [sponsoredFunds, setSponsoredFunds] = useState([]);
   const [recentFunds, setRecentFunds] = useState([]);
@@ -11,7 +22,7 @@ const Commerce = () => {
   const [featuredFunds, setFeaturedFunds] = useState([]);
 
   // Función para agrupar los fondos en grupos de "n" (en este caso, 3)
-  const groupDataInSlides = (data, itemsPerSlide = 3) => {
+  const groupDataInSlides = (data: Fund[], itemsPerSlide = 3) => {
     const groupedSlides = [];
     for (let i = 0; i < data.length; i += itemsPerSlide) {
       groupedSlides.push(data.slice(i, i + itemsPerSlide));
