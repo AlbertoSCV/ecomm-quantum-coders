@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import NavbarMenu from './components/NavbarMenu';
+import { PiAtom } from 'react-icons/pi';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +15,12 @@ const Navbar: React.FC = () => {
     <nav className="navbar bg-base-100 shadow-lg p-4 relative z-50">
       <div className="flex-1">
         <Link href="/" className="text-2xl font-bold">
-        <span className="bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-transparent">
-          QuantumCoders
-        </span>
+        <div className='flex flex-row justify-center items-center'>
+          <PiAtom className='text-purple-400 size-8 mr-2'/>
+          <span className="bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-transparent">
+            QuantumCoders
+          </span>
+        </div>
         </Link>
       </div>
       <div className="flex-none lg:hidden">

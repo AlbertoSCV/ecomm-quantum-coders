@@ -4,13 +4,14 @@ import TeamMemberCard from './components/TeamMemberCard';
 const UsPage = () => {
   return (
     <div className="flex flex-col items-center h-full p-8 space-y-8">
-      <h1 className="text-4xl font-bold text-center">
-        Equipo{' '}
-        <span className="bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-transparent">
-          QuantumCoders
-        </span>
-      </h1>
-
+      <div className='flex flex-row '>
+        <h1 className="text-4xl font-bold text-center">
+          Equipo{' '}
+          <span className="bg-gradient-to-r from-purple-400 to-purple-800 bg-clip-text text-transparent">
+            QuantumCoders
+          </span>
+        </h1>
+      </div>
       <div className="flex flex-col relative lg:flex-row lg:space-x-8 space-y-8 lg:space-y-0 justify-center h-full">
         <TeamMemberCard
           name="Emilio Somoza"

@@ -1,8 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import CommerceCarousel from './components/CommerceCarousel';
-import Checkbox from './components/Checkbox';
+import CommerceCarousel from './components/CommerceCarousel'
 import CommerceNavbar from './components/CommerceNavbar';
 
 const Commerce = () => {

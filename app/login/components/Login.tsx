@@ -6,6 +6,11 @@ interface Props {
   onSubmit: (id: string) => void;
 }
 
+interface User{
+  username: string,
+  password: string
+}
+
 const Login: React.FC<Props> = ({ onSubmit }) => {
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
@@ -16,7 +21,7 @@ const Login: React.FC<Props> = ({ onSubmit }) => {
     e.preventDefault();
     const response = await fetch('/data/users.json');
     const data = await response.json();
-    const user = data.users.find((user: any) => user.username === account && user.password === password);
+    const user = data.users?.find((user: User) => user.username === account && user.password === password);
 
     if (user) {
       onSubmit(user.id);
