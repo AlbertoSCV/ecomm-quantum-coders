@@ -3,16 +3,6 @@ import HeaderWithIcon from './Headers'
 import Carousel from './Carousel'
 import Card from './Card'
 
-interface CardData {
-  id: string
-  name: string;
-  description: string;
-  investors: number;
-  totalAmount: string;
-  raisedAmount: number;
-  imageUrl: string;
-}
-
 interface Fund {
     id: number;
     name: string;
