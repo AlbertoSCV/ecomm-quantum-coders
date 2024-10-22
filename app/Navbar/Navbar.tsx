@@ -19,8 +19,6 @@ const Navbar: React.FC = () => {
         </span>
         </Link>
       </div>
-
-      {/* Hamburger Menu for Mobile */}
       <div className="flex-none lg:hidden">
         <button className="btn btn-square btn-ghost" onClick={toggleMenu}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -28,13 +26,9 @@ const Navbar: React.FC = () => {
           </svg>
         </button>
       </div>
-
-      {/* Desktop Menu */}
       <div className={`flex-none hidden lg:flex`}>
         <NavbarMenu isMobile={false}/>
       </div>
-
-      {/* Mobile Menu with transition */}
       <div
         className={`lg:hidden absolute top-full left-0 w-full bg-base-100 shadow-lg transition-max-height duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-60' : 'max-h-0'}`}
       >

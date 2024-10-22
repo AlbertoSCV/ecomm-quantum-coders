@@ -1,0 +1,29 @@
+{
+    "users": [
+      {
+        "id": "57a810ee-9cfc-483d-ab00-dcf57c2eb9e9",
+        "username": "investor1",
+        "password": "123"
+      },
+      {
+        "id": "efe8fb66-a528-4020-be41-5aa443a341f5",
+        "username": "investor2",
+        "password": "123"
+      },
+      {
+        "id": "cd900ddf-5f7e-4e74-bbff-7d7cb201cc68",
+        "username": "investor3",
+        "password": "123"
+      },
+      {
+        "id": "f65ab4b9-4916-441e-bd7d-de22d9686d1d",
+        "username": "investor4",
+        "password": "123"
+      },
+      {
+        "id": "2f428c2f-595f-479e-adf9-a0b5b5366740",
+        "username": "investor5",
+        "password": "123"
+      }
+    ]
+}
