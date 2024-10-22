@@ -45,7 +45,9 @@ const FundPage = () => {
         const data = await response.json();
 
         // Convertir id_fondo a número para comparar correctamente
-        const fundId = parseInt(id_project, 10);
+        const fundId = Array.isArray(id_project) 
+        ? parseInt(id_project[0], 10) 
+        : parseInt(id_project, 10);
 
         // Buscar el fondo correspondiente por ID
         const selectedFund = data.openFunds.find((fondo: Fund) => fondo.id === fundId);
