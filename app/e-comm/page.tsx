@@ -15,11 +15,11 @@ interface Fund {
 }
 
 const Commerce = () => {
-  const [sponsoredFunds, setSponsoredFunds] = useState([]);
-  const [recentFunds, setRecentFunds] = useState([]);
-  const [popularFunds, setPopularFunds] = useState([]);
-  const [matureFunds, setMatureFunds] = useState([]);
-  const [featuredFunds, setFeaturedFunds] = useState([]);
+  const [sponsoredFunds, setSponsoredFunds] = useState<Fund[][]>([]);
+  const [recentFunds, setRecentFunds] = useState<Fund[][]>([]);
+  const [popularFunds, setPopularFunds] = useState<Fund[][]>([]);
+  const [matureFunds, setMatureFunds] = useState<Fund[][]>([]);
+  const [featuredFunds, setFeaturedFunds] = useState<Fund[][]>([]);
 
   // Función para agrupar los fondos en grupos de "n" (en este caso, 3)
   const groupDataInSlides = (data: Fund[], itemsPerSlide = 3) => {
@@ -43,11 +43,11 @@ const Commerce = () => {
         const data = await response.json();
 
         // Filtrando los datos según las etiquetas (tags)
-        const sponsored = data.openFunds.filter(fund => fund.tags.includes('sponsored'));
-        const recent = data.openFunds.filter(fund => fund.tags.includes('recent'));
-        const popular = data.openFunds.filter(fund => fund.tags.includes('popular'));
-        const mature = data.openFunds.filter(fund => fund.tags.includes('mature'));
-        const featured = data.openFunds.filter(fund => fund.tags.includes('featured'));
+        const sponsored = data.openFunds.filter((fund: Fund) => fund.tags.includes('sponsored'));
+        const recent = data.openFunds.filter((fund: Fund) => fund.tags.includes('recent'));
+        const popular = data.openFunds.filter((fund: Fund) => fund.tags.includes('popular'));
+        const mature = data.openFunds.filter((fund: Fund) => fund.tags.includes('mature'));
+        const featured = data.openFunds.filter((fund: Fund) => fund.tags.includes('featured'));
 
         // Agrupar los fondos en grupos de 3 para cada categoría
         setSponsoredFunds(groupDataInSlides(sponsored));

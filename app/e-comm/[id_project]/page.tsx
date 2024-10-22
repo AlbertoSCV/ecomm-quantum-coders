@@ -23,7 +23,7 @@ interface Fund {
 
 // Función para agrupar los fondos en grupos de "n" (en este caso, 3)
 const groupDataInSlides = (data: Fund[], itemsPerSlide = 3) => {
-  const groupedSlides = [];
+  const groupedSlides:Fund[][] = [];
   for (let i = 0; i < data.length; i += itemsPerSlide) {
     groupedSlides.push(data.slice(i, i + itemsPerSlide));
   }
@@ -34,8 +34,8 @@ const FundPage = () => {
   const {id_project} = useParams(); // Correcto: Obtenemos el parámetro dinámico de la URL
   const [fund, setFund] = useState<Fund | null>(null); // Estado para almacenar el fondo
   const [loading, setLoading] = useState(true); // Estado de carga
-  const [sponsoredFunds, setSponsoredFunds] = useState([]);
-  const [popularFunds, setPopularFunds] = useState([]);
+  const [sponsoredFunds, setSponsoredFunds] = useState<Fund[][]>([]);
+  const [popularFunds, setPopularFunds] = useState<Fund[][]>([]);
 
   useEffect(() => {
     if (!id_project) return; // Verificar si id_fondo está definido
