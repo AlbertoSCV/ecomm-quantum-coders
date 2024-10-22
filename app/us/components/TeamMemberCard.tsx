@@ -40,7 +40,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ name, education, experi
         <div className='flex flex-row w-full h-full justify-end items-end'>
           <Link href={cvUrl}>
             <button className='text-white font-semibold bg-gradient-to-r from-purple-400 to-purple-800 px-6 py-2 rounded-full'>
-              Descargar CV
+              Hoja de Vida
             </button>
           </Link>
         </div>

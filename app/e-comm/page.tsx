@@ -10,7 +10,6 @@ const Commerce = () => {
   const [matureFunds, setMatureFunds] = useState([]);
   const [featuredFunds, setFeaturedFunds] = useState([]);
 
-
   // Función para agrupar los fondos en grupos de "n" (en este caso, 3)
   const groupDataInSlides = (data, itemsPerSlide = 3) => {
     const groupedSlides = [];

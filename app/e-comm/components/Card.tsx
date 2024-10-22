@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface CardProps {
   id: string;
@@ -32,7 +33,9 @@ const Card: React.FC<CardProps> = ({ id, name, description, investors, totalAmou
         </div>
         <div className="card-actions justify-between items-end">
           <span className="text-slate-400">{investors} inversores</span>
-          <button className="p-2 px-4 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-purple-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-600">¡Invierte!</button>
+          <Link href={`/e-comm/${id}`}>
+            <button className="p-2 px-4 rounded-full text-white font-semibold bg-gradient-to-r from-purple-600 to-purple-800 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-600">¡Invierte!</button>
+          </Link>
         </div>
       </div>
     </div>

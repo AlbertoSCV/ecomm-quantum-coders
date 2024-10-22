@@ -20,9 +20,9 @@ const UsPage = () => {
           skills="Backend, Arquitecto de Bases de Datos, Dominio en multiples lenguajes de programación."
           imageSrc="/images/emilio.jpeg"
           altText="Imagen de Emilio Somoza"
-          gitUrl='/'
-          linkedinUrl='/'
-          cvUrl='/cv/cv_alberto_somoza'
+          gitUrl='https://github.com/Emilio25232'
+          linkedinUrl='https://www.linkedin.com/in/emilio-somoza-b4a244258/'
+          cvUrl='/cv/cv_emilio_somoza.pdf'
         />
 
         <TeamMemberCard

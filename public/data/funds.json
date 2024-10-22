@@ -2,6 +2,7 @@
     "openFunds": [
       {
         "id": 0,
+        "productor": "Alberto Somoza",
         "name": "Plantación de Mango en Veraguas",
         "description": "Finca en Veraguas con capacidad para producir más de 500 toneladas de mango.",
         "province": "Veraguas",
@@ -13,28 +14,31 @@
       },
       {
         "id": 1,
+        "productor": "Carlos Rivera",
         "name": "Cultivo de Tomates Orgánicos",
         "description": "Producción de tomates orgánicos en Colón, con técnicas de cultivo sostenible.",
         "province": "Colón",
         "totalAmount": 5000,
         "raisedAmount": 3120,
         "investors": 12,
-        "tags": ["recent", "new", "organic"],
+        "tags": ["recent", "new"],
         "imageUrl": "/images/funds/1.jpg"
       },
       {
         "id": 2,
+        "productor": "Gabriela Espinoza",
         "name": "Invernadero de Pimientos",
         "description": "Proyecto de invernadero en Herrera para el cultivo de pimientos rojos y verdes.",
         "province": "Herrera",
         "totalAmount": 9000,
         "raisedAmount": 6540,
         "investors": 20,
-        "tags": ["featured", "recommended", "recent", "new"],
+        "tags": ["featured", "recommended", "new"],
         "imageUrl": "/images/funds/2.jpg"
       },
       {
         "id": 3,
+        "productor": "Ricardo Pérez",
         "name": "Plantación de Aguacates",
         "description": "Cultivo de aguacates en tierras altas de Boquete, ideal para exportación.",
         "province": "Chiriquí",
@@ -46,17 +50,19 @@
       },
       {
         "id": 4,
+        "productor": "Laura Gómez",
         "name": "Producción de Miel de Abejas",
         "description": "Granjas apícolas en Coclé dedicadas a la producción de miel 100% natural.",
         "province": "Coclé",
         "totalAmount": 3000,
         "raisedAmount": 2700,
         "investors": 10,
-        "tags": ["eco-friendly", "natural", "featured", "old"],
+        "tags": ["eco-friendly", "popular", "old"],
         "imageUrl": "/images/funds/4.jpg"
       },
       {
         "id": 5,
+        "productor": "Juan Fernández",
         "name": "Invernadero de Fresas en Boquete",
         "description": "Proyecto de cultivo de fresas en Boquete, optimizado para exportación.",
         "province": "Chiriquí",
@@ -68,6 +74,7 @@
       },
       {
         "id": 6,
+        "productor": "Martina Herrera",
         "name": "Café de Alta Calidad en Chiriquí",
         "description": "Finca dedicada a la producción de café geisha, con alta demanda en el mercado internacional.",
         "province": "Chiriquí",
@@ -79,6 +86,7 @@
       },
       {
         "id": 7,
+        "productor": "Jorge Martínez",
         "name": "Cultivo de Banano Orgánico",
         "description": "Finca en Bocas del Toro con certificación orgánica para la producción de banano.",
         "province": "Bocas del Toro",
@@ -90,50 +98,55 @@
       },
       {
         "id": 8,
+        "productor": "Raúl Sánchez",
         "name": "Huerta de Verduras Sostenible",
         "description": "Cultivo sostenible de diversas verduras en la región de Azuero.",
         "province": "Los Santos",
         "totalAmount": 4000,
         "raisedAmount": 3000,
         "investors": 8,
-        "tags": ["sustainable", "recent", "eco-friendly", "new"],
+        "tags": ["sustainable", "recent", "popular", "new"],
         "imageUrl": "/images/funds/8.jpg"
       },
       {
         "id": 9,
+        "productor": "Manuel Díaz",
         "name": "Producción de Lácteos en Veraguas",
         "description": "Finca dedicada a la producción de leche y derivados, ubicada en Veraguas.",
         "province": "Veraguas",
         "totalAmount": 12000,
         "raisedAmount": 10200,
         "investors": 30,
-        "tags": ["mature"],
+        "tags": ["mature", "featured"],
         "imageUrl": "/images/funds/9.webp"
       },
       {
         "id": 10,
+        "productor": "Diana González",
         "name": "Cebolla en tierras altas de Chiriquí",
         "description": "Gran finca dedicada a la producción de cebollas en las tierras altas.",
         "province": "Chiriquí",
         "totalAmount": 5000,
         "raisedAmount": 3500,
         "investors": 15,
-        "tags": ["new", "popular", "recent"],
+        "tags": ["new", "recent"],
         "imageUrl": "/images/funds/10.jpg"
       },
       {
         "id": 11,
+        "productor": "Lucía Méndez",
         "name": "Cultivo de arroz en Darién",
         "description": "Finca de gran extensión dedicada a la producción de arroz de alta calidad.",
         "province": "Darién",
         "totalAmount": 15000,
         "raisedAmount": 9000,
         "investors": 27,
-        "tags": ["sponsored"],
+        "tags": ["featured"],
         "imageUrl": "/images/funds/11.webp"
       },
       {
         "id": 12,
+        "productor": "Pedro Jiménez",
         "name": "Invernadero de Pimientos en Coclé",
         "description": "Proyecto de invernadero en Coclé para el cultivo de pimientos verdes.",
         "province": "Coclé",
@@ -145,6 +158,7 @@
       },
       {
         "id": 13,
+        "productor": "Felipe Morales",
         "name": "Producción de Uvas en Los Santos",
         "description": "Proyecto de cultivo de uvas en la región vitivinícola emergente de Los Santos.",
         "province": "Los Santos",
@@ -156,14 +170,16 @@
       },
       {
         "id": 14,
+        "productor": "Paula Ramírez",
         "name": "Cultivo de piña en Panamá Oeste",
         "description": "Finca en Panamá Oeste dedicada a la producción de piña de exportación.",
         "province": "Panamá Oeste",
         "totalAmount": 14000,
         "raisedAmount": 9200,
         "investors": 28,
-        "tags": ["sponsored"],
+        "tags": ["featured"],
         "imageUrl": "/images/funds/14.jpg"
       }
     ]
-}
+  }
+  
