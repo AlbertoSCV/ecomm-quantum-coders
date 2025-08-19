@@ -62,12 +62,6 @@ Este proyecto es un **prototipo no funcional**, desarrollado únicamente como pr
 
 ---
 
-## 📷 Capturas de Pantalla
-
-_(Agrega aquí screenshots del prototipo para mostrar en el portafolio)_
-
----
-
 ## 🤝 Contribución
 
 Este proyecto nació como parte de una hackatón, pero está abierto a la mejora y evolución.  
