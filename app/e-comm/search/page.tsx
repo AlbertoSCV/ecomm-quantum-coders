@@ -1,7 +1,8 @@
+// app/e-comm/search/page.tsx
 'use client';
 
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import Card from '../components/Card';
 import CommerceNavbar from '../components/CommerceNavbar';
 
@@ -18,62 +19,54 @@ interface Fund {
   imageUrl: string;
 }
 
-const SearchPage = () => {
+function SearchClient() {
   const searchParams = useSearchParams();
-  const query = searchParams.get('query');
+  const query = (searchParams.get('query') || '').toLowerCase();
+
   const [funds, setFunds] = useState<Fund[]>([]);
   const [filteredFunds, setFilteredFunds] = useState<Fund[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/data/funds.json');
-        const data = await response.json();
-        setFunds(data.openFunds); // Cargar todos los fondos
-      } catch (error) {
-        console.error('Error al cargar los fondos:', error);
-      }
-    };
-
-    fetchData();
+    (async () => {
+      const res = await fetch('/data/funds.json');
+      const data = await res.json();
+      setFunds(data.openFunds ?? []);
+    })();
   }, []);
 
   useEffect(() => {
-    if (query && funds.length > 0) {
-      const results = funds.filter((fund) =>
-        fund.name.toLowerCase().includes(query.toLowerCase()) ||
-        fund.description.toLowerCase().includes(query.toLowerCase())
-      );
-      console.log(results)
-      setFilteredFunds(results);
+    if (!query) {
+      setFilteredFunds([]);
+      return;
     }
+    setFilteredFunds(
+      funds.filter(
+        f =>
+          f.name.toLowerCase().includes(query) ||
+          f.description.toLowerCase().includes(query)
+      )
+    );
   }, [query, funds]);
 
   return (
-    <div>
-        <CommerceNavbar>
-            <div className="flex flex-wrap justify-center gap-4">
-            {filteredFunds.length > 0 ? (
-                filteredFunds.map((card, idx) => (
-                <Card
-                    key={idx}
-                    id={card.id}
-                    name={card.name}
-                    description={card.description}
-                    investors={card.investors}
-                    totalAmount={card.totalAmount}
-                    raisedAmount={card.raisedAmount}
-                    imageUrl={card.imageUrl}
-                    tags={card.tags}
-                />
-                ))
-                ) : (
-                <p>No se encontraron resultados.</p>
-                )}
-            </div>
-        </CommerceNavbar>
-    </div>
+    <CommerceNavbar>
+      <div className="flex flex-wrap justify-center gap-4">
+        {query && filteredFunds.length > 0 ? (
+          filteredFunds.map((card) => (
+            <Card key={card.id} {...card} />
+          ))
+        ) : (
+          <p>{query ? 'No se encontraron resultados.' : 'Escribe tu búsqueda.'}</p>
+        )}
+      </div>
+    </CommerceNavbar>
   );
-};
+}
 
-export default SearchPage;
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<CommerceNavbar>Loading...</CommerceNavbar>}>
+      <SearchClient />
+    </Suspense>
+  );
+}
